@@ -1,0 +1,22 @@
+{
+  "name": "paper-slider-addon",
+  "authors": [
+    "Olli Tietäväinen <ollit@vaadin.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "Apache2",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "1.7.0",
+    "paper-slider": "PolymerElements/paper-slider#~1.0.12"
+  }
+}
