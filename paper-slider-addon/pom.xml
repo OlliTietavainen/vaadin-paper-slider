@@ -6,7 +6,7 @@
     <artifactId>paper-slider-addon</artifactId>
     <packaging>jar</packaging>
     <version>0.0.1</version>
-    <name>Paper Slider add-on</name>
+    <name>Paper Slider Add-on</name>
 
     <prerequisites>
         <maven>3</maven>

@@ -22,14 +22,24 @@ public class PaperSlider extends com.vaadin.ui.Slider {
             try {
                 String v = root.getAttribute("value");
                 if ("".equals(v)) {
-                    setValue(null);
+                    setValueFromListener(null);
                 } else {
-                    setValue(Double.parseDouble(v));
+                    setValueFromListener(Double.parseDouble(v));
                 }
             } catch (NumberFormatException e) {
                 setValue(null);
             }
+            fireValueChange(false);
         });
     }
 
+    @Override
+    public void setValue(Double newFieldValue) {
+        super.setInternalValue(newFieldValue);
+        root.setAttribute("value", "" + newFieldValue);
+    }
+
+    public void setValueFromListener(Double newValue) {
+        super.setInternalValue(newValue);
+    }
 }

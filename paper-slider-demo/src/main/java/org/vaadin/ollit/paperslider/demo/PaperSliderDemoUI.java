@@ -25,23 +25,19 @@ public class PaperSliderDemoUI extends UI {
         vert.setMargin(true);
         vert.addComponent(new Label("paper-slider:"));
         PaperSlider paperSlider = new PaperSlider();
-        paperSlider.addValueChangeListener(event -> {
-            Notification.show("paper-slider value changed to " + event.getProperty().getValue());
-        });
+        paperSlider.setValue(10.0);
+
         vert.addComponent(paperSlider);
         vert.addComponent(new Label("Normal Vaadin Slider"));
         Slider slider = new Slider();
         slider.addValueChangeListener(event -> {
             Notification.show("Vaadin Slider value changed to " + event.getProperty().getValue());
         });
+        paperSlider.addValueChangeListener(event -> {
+            Notification.show("paper-slider value changed to " + event.getProperty().getValue());
+        });
         vert.addComponent(slider);
         setContent(vert);
-    }
-
-    private void showValue(Property.ValueChangeEvent e) {
-        Notification.show(
-                "datePicker value changed to " + e.getProperty().getValue());
-
     }
 
     @WebServlet(value = "/*", asyncSupported = true)

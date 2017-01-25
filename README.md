@@ -1,8 +1,9 @@
 # Paper-Slider Add-on for Vaadin 7
 
 This add-on allows the use of the `paper-slider` Polymer Element in Vaadin 7.
+Modeled after https://github.com/Artur-/date-picker .
 
-## Building and running demo
+## Building and running the demo
 
 1. Clone the repository
 1. `pushd paper-slider-addon/src/main/resources/VAADIN`
